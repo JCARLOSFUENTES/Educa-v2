@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'AprenDev')
+@section('title', 'EduCA')
 
 @section('content')
 
 <div class="container mx-auto px-4 py-8 h-auto lg:h-full grid place-items-center">
-    <h1 class="text-4xl font-bold mb-4 text-center">Bienvenido a { Apren <span class="text-primary">Dev</span> } </h1>
-    <p class="text-lg text-gray-700 mb-8">AprenDev es una innovadora plataforma educativa diseñada para programadores, estudiantes de primaria, universitarios ofreciendo una amplia gama de recursos que incluyen videos. Nuestro compromiso es proporcionar un ambiente de aprendizaje enriquecedor. Buscamos llevar conocimientos a todas aquellas personas que quieran ampliar sus habilidades.</p>
+    <h1 class="text-4xl font-bold mb-4 text-center">Bienvenido a Edu<span class="text-primary">CA</span></h1>
+    <p class="text-lg text-gray-700 mb-8">EduCA es una innovadora plataforma educativa diseñada para programadores, estudiantes de primaria, universitarios ofreciendo una amplia gama de recursos que incluyen videos. Nuestro compromiso es proporcionar un ambiente de aprendizaje enriquecedor. Buscamos llevar conocimientos a todas aquellas personas que quieran ampliar sus habilidades.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="bg-white p-6 rounded-lg shadow-lg transition-all transform hover:-translate-y-4 hover:shadow-xl">

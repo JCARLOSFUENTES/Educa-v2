@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'AprenDev - Perfil')
+@section('title', 'EduCA - Perfil')
 
 @section('content')
 <main class="w-full h-screen bg-gray-100 flex justify-center items-center">

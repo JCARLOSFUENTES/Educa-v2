@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'AprenDev - Crear Cuenta')
+@section('title', 'EduCA - Crear Cuenta')
 
 @section('content')
 
@@ -18,7 +18,7 @@
                 <div>
                     <label for="email" class="block">Correo Electrónico</label>
                     <input type="email" id="email" name="email" placeholder="Correo electrónico" value="{{ old('email') }}"
-                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none 
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none
                         @error('email')
                         border-red-500 border-2
                         @enderror">
@@ -30,7 +30,7 @@
                 <div>
                     <label for="name" class="block">Nombre</label>
                     <input type="text" id="name" name="name" placeholder="Nombre" value="{{ old('name') }}"
-                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none 
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none
                         @error('name')
                         border-red-500 border-2
                         @enderror">
@@ -42,7 +42,7 @@
                 <div>
                     <label for="username" class="block">Usuario</label>
                     <input type="text" id="username" name="username" placeholder="Nombre de usuario" value="{{ old('username') }}"
-                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none 
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none
                         @error('username')
                         border-red-500 border-2
                         @enderror">
@@ -54,7 +54,7 @@
                 <div>
                     <label for="password" class="block">Contraseña</label>
                     <input type="password" id="password" name="password" placeholder="Contraseña"
-                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none 
+                        class="w-full border border-gray-300 rounded-md px-4 py-2 focus:border-primary focus:outline-none
                         @error('password')
                         border-red-500 border-2
                         @enderror">
