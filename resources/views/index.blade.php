@@ -14,7 +14,7 @@
                             <div class="bg-white shadow-md rounded-md p-4">
                                 <img src="{{ asset($course->image_url) }}" alt="{{ $course->name }}" class="w-full h-32 object-cover mb-4">
                                 <h3 class="text-lg font-semibold mb-2">{{ $course->name }}</h3>
-                                <p class="text-sm text-gray-600">{{ $course->description }}</p>
+                                <p class="text-sm text-gray-600">{{ Str::substr($course->description, 0, 70) }}...</p>
                                 <a href="{{ route('course.index', $course->slug) }}" class="block mt-4 text-blue-500 hover:text-blue-700">Ver más</a>
                             </div>
                         @endforeach

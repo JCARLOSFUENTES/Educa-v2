@@ -19,7 +19,7 @@
             <!-- Course Information -->
             <div class="p-6">
                 <h1 class="text-xl font-semibold mb-2">{{ $course->name }}</h1>
-                
+
                 <!-- Lesson List -->
                 <div>
                     <p class="text-lg font-semibold mb-2">Lección: {{ $lesson->name }}</p>
@@ -65,10 +65,11 @@
             <!-- Course Information -->
             <div class="p-6">
                 <h1 class="text-xl font-semibold mb-2">{{ $course->name }}</h1>
-                
+
                 <!-- Lesson List -->
                 <div>
                     <p class="text-lg font-semibold mb-2">Lección: {{ $lesson->name }}</p>
+                    <p class="text-lg font-semibold mb-2">Descripción: <span class="text-primary">{{ $lesson->description }}</span></p>
                     <div>
                         <div class="mb-4">
                             <p class="text-lg font-semibold mb-2">Lecciones</p>

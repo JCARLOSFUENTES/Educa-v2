@@ -19,7 +19,7 @@
                     <p class="text-red-500 text-xs mt-1">{{ session('mensaje') }}</p>
                 @endif
                 <div>
-                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Correo Electronico</label>
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Correo Electrónico</label>
                     <div class="mt-2">
                         <input id="email" name="email" type="email" autocomplete="email" required
                             class="p-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
@@ -62,7 +62,7 @@
             </form>
 
             <p class="mt-10 text-center text-sm text-gray-500">
-                No tienes cuenta?
+                ¿No tienes cuenta?
                 <a href="{{ route('register.index') }}" class="font-semibold leading-6 hover:text-primary">Crea una</a>
             </p>
         </div>
