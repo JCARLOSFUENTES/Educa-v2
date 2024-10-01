@@ -12,42 +12,43 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        /* \App\Models\User::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+         \App\Models\User::factory()->create([
+             'name' => 'Test User',
+             'email' => 'test@example.com',
+         ]);
 
-        // \App\Models\Category::factory()->create([
-        //     'name' => 'Español',
-        // ]);
+         \App\Models\Category::factory()->create([
+             'name' => 'Español',
+         ]);
 
-        // \App\Models\Category::factory()->create([
-        //     'name' => 'Inglés',
-        // ]);
+         \App\Models\Category::factory()->create([
+             'name' => 'Inglés',
+         ]);
 
-        // \App\Models\Category::factory()->create([
-        //     'name' => 'Arte',
-        // ]);
+         \App\Models\Category::factory()->create([
+             'name' => 'Arte',
+         ]);
 
-        // \App\Models\Category::factory()->create([
-        //     'name' => 'Tecnología',
-        // ]);
+         \App\Models\Category::factory()->create([
+             'name' => 'Tecnología',
+         ]);
 
-        // \App\Models\Category::factory()->create([
-        //     'name' => 'Matemáticas',
-        // ]);
+         \App\Models\Category::factory()->create([
+             'name' => 'Matemáticas',
+         ]);
 
-        // \App\Models\Category::factory()->create([
-        //     'name' => 'Ciencias',
-        // ]);
+         \App\Models\Category::factory()->create([
+             'name' => 'Ciencias',
+         ]);
 
-        // \App\Models\Category::factory()->create([
-        //     'name' => 'Emprendimiento',
-        // ]);
+         \App\Models\Category::factory()->create([
+             'name' => 'Emprendimiento',
+         ]);
+         */
 
-        \App\Models\Course::factory()->create([
+         \App\Models\Course::factory()->create([
             'name' => 'Español 1',
             'description' => 'jdhjdjsjs',
             'image_url' => '/',
@@ -172,6 +173,8 @@ class DatabaseSeeder extends Seeder
             'slug' => 'emprendimiento-2',
             'likes' => 0,
         ]);
+
+
 
         // \App\Models\Course::factory(20)->create();
 

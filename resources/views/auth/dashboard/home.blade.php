@@ -46,6 +46,105 @@
 
     </main>
 
+    <div>  <!-- chatboot -->
+        <!-- Abrir el boot -->
+        <div id="bot-emergente" >
+
+            <div style="display: flex; justify-content:right"> <!-- Bot -->
+
+                <a  href="javascript:evaluarProfesor()">
+                    <img src="images/Bot 2.png" alt="Bot" class="w-56 h-auto">
+                </a>
+
+            </div>
+
+            <!-- Modal para boot -->
+            <div class="bot" id="modalEvaluacion">
+                <form action="{{  route( "courses.all2")}}" method="POST">
+                    @csrf
+                    <h2 style="font-weight:bold; color:#00509a">
+                        ¡Hola soy Watson y te ayudare a encontrar <br> los mejores cursos para ti!
+                    </h2>
+                    <i class="fas fa-times" id="equisModal"></i>
+
+                    <div>
+                        <p>Solo necesito que me des el porcentaje de conocimientos que tienes en las siguientes asignaturas</p><br>
+
+                        <div class="range-group">
+                            <label for="Español">Español</label>
+                            <input id="Español" type="range" list="calificacionesPosibles" step="5" oninput="dificultad(this.value, 'evaluacionEspañol')" name="Español">
+                            <span id="evaluacionEspañol">50</span>
+                        </div>
+
+                        <div class="range-group">
+                            <label for="Matemáticas">Matemáticas</label>
+                            <input id="Matemáticas" type="range" list="calificacionesPosibles" step="5" oninput="dificultad(this.value, 'evaluacionMatematicas')" name="Matemáticas">
+                            <span id="evaluacionMatematicas">50</span>
+                        </div>
+
+                        <div class="range-group">
+                            <label for="tecnologia">Tecnología</label>
+                            <input id="tecnologia" type="range" list="calificacionesPosibles" step="5" oninput="dificultad(this.value, 'evaluacionTecnologia')" name="Tecnología">
+                            <span id="evaluacionTecnologia">50</span>
+                        </div>
+
+                        <div class="range-group">
+                            <label for="ciencias">Ciencias</label>
+                            <input id="ciencias" type="range" list="calificacionesPosibles" step="5" oninput="dificultad(this.value, 'evaluacionCiencias')" name="Ciencias">
+                            <span id="evaluacionCiencias">50</span>
+                        </div>
+
+                        <div class="range-group">
+                            <label for="idiomas">Inglés</label>
+                            <input id="idiomas" type="range" list="calificacionesPosibles" step="5" oninput="dificultad(this.value, 'evaluacionIdiomas')" name="Inglés">
+                            <span id="evaluacionIdiomas">50</span>
+                        </div>
+
+                        <div class="range-group">
+                            <label for="arte">Arte</label>
+                            <input id="arte" type="range" list="calificacionesPosibles" step="5" oninput="dificultad(this.value, 'evaluacionArte')" name="Arte">
+                            <span id="evaluacionArte">50</span>
+                        </div>
+
+                        <div class="range-group">
+                            <label for="Emprendimiento">Emprendimiento</label>
+                            <input id="Emprendimiento" type="range" list="calificacionesPosibles" step="5" oninput="dificultad(this.value, 'evaluacionEmprendimiento')" name="Emprendimiento">
+                            <span id="evaluacionEmprendimiento">50</span>
+                        </div>
+
+                    </div>
+
+                    <button class="btn-boot" name="Listo">Listo</button>
+
+                    <datalist id="calificacionesPosibles">
+                        <option value="0" label="0%">
+                        <option value="5">
+                        <option value="10">
+                        <option value="15">
+                        <option value="20">
+                        <option value="25">
+                        <option value="30">
+                        <option value="35">
+                        <option value="40">
+                        <option value="45">
+                        <option value="50" label="50%">
+                        <option value="55">
+                        <option value="60">
+                        <option value="65">
+                        <option value="70">
+                        <option value="75">
+                        <option value="80">
+                        <option value="85">
+                        <option value="90">
+                        <option value="95">
+                        <option value="100" label="100%">
+                    </datalist>
+                </form>
+                <img src="{{ asset('images/bot.png') }}" alt="Bot" height="200">
+            </div>
+
+    </div>
+
     <section id="featured" class="px-3 h-auto w-full">
         <p class="text-3xl text-primary font-semibold mt-6 mb-6">Cursos Destacados</p>
         <div class="w-full h-full grid grid-cols-1 lg:grid-cols-2 lg:place-items-center gap-4 lg:place-content-stretch">
@@ -66,6 +165,30 @@
             @endforeach
         </div>
     </section>
+
+
+    <script>  //Javascript para chatboot
+        // Función para cerrar el modal
+     function cerrarModal() {
+         document.getElementById("modalEvaluacion").style.width = "0vw";
+     }
+
+     // Función para abrir el modal
+     function evaluarProfesor() {
+         document.getElementById("modalEvaluacion").style.width = "100vw";
+     }
+
+     // Función para cambiar el valor de la dificultad
+     function dificultad(newVal, spanId) {
+         document.getElementById(spanId).innerHTML = newVal;
+     }
+
+     // Evento para cerrar el modal al hacer clic en el tache
+     document.getElementById("equisModal").addEventListener('click', function() {
+         cerrarModal();
+     });
+
+     </script>
 
 
 

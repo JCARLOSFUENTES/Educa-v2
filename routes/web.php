@@ -32,6 +32,7 @@ Route::controller(CourseController::class)->group(function () {
     Route::get('/course/{course:slug}', 'index')->name('course.index');
     Route::post('/course/{course:slug}/like', 'like')->name('course.like');
     Route::get('/all-courses', 'all')->name('courses.all');
+    Route::post('/all-courses', 'all2')->name('courses.all2');
 
 });
 

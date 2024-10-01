@@ -15,20 +15,20 @@ class CourseController extends Controller
     {
         return $this->middleware('auth');
     }
-    
+
     public function showCoursesByUserCategories(Request $request)
     {
         // Obtener al usuario autenticado
         $user = $request->user();
-    
+
         // Obtener categorias del usuario
         $userCategories = $user->categories()->pluck('categories.id');
-    
+
         // Obtener los cursos asociados a las categorías del usuario y ordenarlos por likes de mayor a menor
         $courses = Course::whereIn('category_id', $userCategories)
                         ->orderByDesc('likes') // Ordenar por likes de manera descendente
                         ->get();
-    
+
         return $courses;
     }
 
@@ -50,7 +50,7 @@ class CourseController extends Controller
             $request->user()->courses()->detach($course);
             $course->decrement('likes');
         }
-    
+
         // Redirigir al usuario de regreso a la página del curso
         return redirect()->route('course.index', ['course' => $course->slug]);
     }
@@ -59,6 +59,15 @@ class CourseController extends Controller
     {
         $categories = Category::with('courses')->get();
         return view('index', compact('categories'));
+    }
+
+    public function all2(Request $request)
+    {
+        //dd($request);
+        $data = $request->except(['Listo', '_token']);
+        $categories = Category::with('courses')->get();
+
+        return view('index', compact('categories','data'));
     }
     // {
     //     $courses = Course::all();

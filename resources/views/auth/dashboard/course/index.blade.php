@@ -40,13 +40,16 @@
                     <div class="relative">
                         <img src="{{ asset($lesson->img_url) }}" alt="{{ $lesson->name }}"
                             class="w-full h-48 object-cover" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <p class="text-2xl font-bold text-primary">{{ $lesson->name }}</p>
+                        </div>
                     </div>
                     <div class="p-4">
-                        <p class="text-2xl font-bold text-primary">{{ $lesson->name }}</p>
-                        <p class="text-sm text-gray-600">{{ Str::substr($lesson->description, 0, 70)  }}...</p>
+                        <p class="text-sm text-gray-600">{{ $lesson->description }}</p>
                     </div>
                 </a>
             @endforeach
+
 
 
 
