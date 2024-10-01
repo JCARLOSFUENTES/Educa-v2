@@ -28,7 +28,7 @@
                <!-- Modal -->
                 <div id="modalEvaluacion" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50" style="display: none;">
                     <div class="bg-white rounded-md p-6 max-w-lg w-full max-h-[80vh] overflow-y-auto">
-                        <h2 class="text-lg font-bold">Mi recomendación</h2>
+                        <h2 class="text-lg font-bold" style="color: #00509a">Mi recomendación</h2>
                         <p>
                             @if ($minValue<80)
                                 Okay, puedo ver que en el área donde más dificultad de aprendizaje tienes es en:

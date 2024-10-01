@@ -18,11 +18,12 @@
     @apply text-3xl px-8 pt-8 pb-1 font-semibold
 }
 
+/* Estilos generales */
 .bot {
     width: 0vw;
     height: 100vh;
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.85); /* Asegura un fondo oscuro sólido */
+    background-color: rgba(0, 0, 0, 0.85);
     top: 0;
     left: 0;
     display: flex;
@@ -31,7 +32,7 @@
     overflow-x: hidden;
     transition: 0.4s;
     -webkit-transition: 0.4s;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 .bot form {
@@ -41,7 +42,7 @@
     gap: 2rem;
     padding: 4rem;
     position: relative;
-    z-index: 1001; /* Para que esté encima del fondo */
+    z-index: 1001;
 }
 
 .bot form>h2 {
@@ -85,7 +86,7 @@
 .bot form>button {
     padding: 1.2rem;
     align-self: center;
-    background-color: #00509a;;
+    background-color: #00509a;
     color: white;
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -122,7 +123,7 @@
     border-radius: 1rem;
 }
 
-.btn-boot{
+.btn-boot {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -140,7 +141,6 @@
     -ms-transition: .3s;
     -o-transition: .3s;
     background-color: aqua;
-
 }
 
 .range-group {
@@ -166,10 +166,83 @@
 
 #bot-emergente {
     position: fixed;
-    bottom: 20px; /* Ajusta la distancia desde la parte inferior */
-    right: 20px;  /* Ajusta la distancia desde la parte derecha */
-    width: 300px; /* Ajusta según el tamaño del bot */
-    height: 150px; /* Tamaño fijo */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    overflow-y: auto; /* Permite desplazarse verticalmente si el contenido es mayor */
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 150px;
+    z-index: 1000;
+    overflow-y: auto;
 }
+
+/* Responsivo para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .bot form {
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    .bot form>h2 {
+        font-size: 1.2rem;
+    }
+
+    .bot form>i {
+        font-size: 1.5rem;
+        top: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .bot form>button {
+        padding: 1rem;
+    }
+
+    .bot form input[type=range] {
+        width: 80%;
+    }
+
+    #bot-emergente {
+        width: 250px;
+        height: 130px;
+    }
+
+    .btn-boot {
+        width: 7rem;
+        height: 1.8rem;
+    }
+}
+
+/* Responsivo para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .bot form {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .bot form>h2 {
+        font-size: 1rem;
+    }
+
+    .bot form>i {
+        font-size: 1.3rem;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .bot form>button {
+        padding: 0.8rem;
+    }
+
+    .bot form input[type=range] {
+        width: 100%;
+    }
+
+    #bot-emergente {
+        width: 200px;
+        height: 100px;
+    }
+
+    .btn-boot {
+        width: 6rem;
+        height: 1.5rem;
+    }
+}
+
